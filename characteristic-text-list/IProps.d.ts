@@ -1,9 +1,9 @@
 /**
- * characteristic-list
- * @Component CharacteristicList
+ * characteristic-text-list
+ * @Component CharacteristicTextList
  * @title 测试组件
  */
-export default interface CharacteristicListIProps {
+export default interface CharacteristicTextListIProps {
   /**
    * 标题配置
    *

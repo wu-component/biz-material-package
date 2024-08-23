@@ -5,8 +5,8 @@ export default defineConfig({
   meta: {
     type: 'material',
     lib: {
-      libName: "TestMaterial",
-      name: "test-material",
+      libName: "CharacteristicTextList",
+      name: "characteristic-text-list",
       formats: ['umd', 'es', 'cjs', 'iife'],
       fileName: format => `${format}.js`,
       external: {

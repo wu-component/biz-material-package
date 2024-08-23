@@ -33,6 +33,7 @@ const Item = (props: ItemCardProps) => {
 
 }
 export default (props: IProps): React.JSX.Element => {
+  console.log(props)
   const {titleConfig, subTitleConfig, list = [], style = {}} = props;
 
   const titleStyle = useMemo(() => {
