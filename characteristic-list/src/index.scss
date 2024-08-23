@@ -1,0 +1,32 @@
+.characteristicList_container {
+  .list {
+    display: flex;
+    justify-content: center;
+    .item {
+      margin: 12px 48px;
+      text-align: center;
+      .image {
+        width: 90px;
+        height: 85px;
+        object-fit: cover;
+        border-radius: 0px;
+      }
+      .text {
+        font-size: 16px;
+        color: #000;
+        font-weight: 400;
+      }
+    }
+
+  }
+  .title {
+    text-align: center;
+
+  }
+  .subTitle {
+    text-align: center;
+    margin: 12px 0 12px 0;
+
+  }
+
+}
