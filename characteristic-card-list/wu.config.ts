@@ -15,10 +15,11 @@ export default defineConfig({
       }
     },
     user: {
-      userName: '',
-      password: '',
+      userName: 'gpt-admin',
+      password: '00000000',
       // 需要在平台侧创建开发这密钥
-      accessKey: ''
+      accessKey: '7ff55cc818a24278b3bac33dffef3a2d',
+      host: 'http://127.0.0.1:10009'
     }
   }
 })
