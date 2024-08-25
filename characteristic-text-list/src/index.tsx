@@ -26,14 +26,14 @@ const Item = (props: ItemCardProps) => {
 
   return (
     <div className={'item'}>
-      <img className="image" src={backgroundImage} style={imageStyle} />
+      <img crossOrigin="anonymous" className="image" src={backgroundImage} style={imageStyle} />
       <div className="text" style={styleVal}>{description}</div>
     </div>
   )
 
 }
 export default (props: IProps): React.JSX.Element => {
-  console.log(props)
+  // @ts-ignore
   const {titleConfig, subTitleConfig, list = [], style = {}} = props;
 
   const titleStyle = useMemo(() => {

@@ -40,6 +40,8 @@ export interface ItemCardProps {
    * @title 主题图片
    * @type string
    * @format image
+   * @action /file-server/v1.0/upload
+   * @resultPath
    * @default https://tianshu.alicdn.com/9652b6f7-8bc9-4527-9854-06c59f2b0bc8.png
    */
   backgroundImage: string;
@@ -78,7 +80,7 @@ export interface ItemCardProps {
   /**
    * 图片宽度
    *
-   * @title 字体大小
+   * @title 图片宽度
    * @min 60
    * @max 200
    * @type number
