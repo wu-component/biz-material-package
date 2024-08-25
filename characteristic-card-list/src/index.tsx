@@ -51,7 +51,7 @@ function getPosition(columns: number, index: number) {
 }
 export default (props: IProps): React.JSX.Element => {
   // @ts-ignore
-  const {titleConfig, subTitleConfig, list = [], style = {}, columns = 4, onClick} = props;
+  const {titleConfig, subTitleConfig, list = [], style = {}, columns: propsColumns = 4, onClick} = props;
 
   const titleStyle = useMemo(() => {
     const val: React.CSSProperties = {};
@@ -75,14 +75,19 @@ export default (props: IProps): React.JSX.Element => {
     return val
   }, [subTitleConfig?.text, subTitleConfig?.fontColor, subTitleConfig?.fontSize])
 
+  const columns = useMemo(() => {
+    return propsColumns;
+
+  }, [propsColumns, list])
+
   const listStyle = useMemo(() => {
     const val: React.CSSProperties = {};
     if (columns) {
       val.gridTemplateColumns = `repeat(${columns}, 325px)`;
-      val.gridTemplateRows = `repeat(${columns}, 170px)`;
+      val.gridTemplateRows = `repeat(${Math.ceil(list.length / columns)}, 170px)`;
     }
     return val
-  }, [columns])
+  }, [columns, list])
 
 
   return (
