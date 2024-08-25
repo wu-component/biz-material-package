@@ -1,0 +1,96 @@
+.characteristicCardList_container {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 325px);
+    grid-gap: 0;
+    grid-template-rows:repeat(3, 170px);
+    justify-content: center;
+    margin-top: 48px;
+    // box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    //border-radius: 8px;
+    .not-first-row {
+      border-top: 0 !important;
+    }
+    .not-first-last-column {
+      border-left: 0 !important;
+      // border-right: 0 !important;
+    }
+    .last-column {
+      border-left: 0 !important;
+    }
+    .column1.row1 {
+      border-radius: 8px 0 0 0;
+    }
+    .row1.last-column {
+      border-radius: 0 8px 0 0;
+    }
+    .last-row.column1 {
+      border-radius: 0 0 0 8px;
+    }
+    .last-row.last-column {
+      border-radius: 0 0 8px 0;
+    }
+    .itemContainer {
+      padding-right: 16px;
+      padding-left: 31px;
+      display: flex;
+      align-items: center;
+      // border-right: 0.5px solid rgba(31, 56, 88, 0.2);
+      // width: 325px;
+      //min-height: 170px;
+      cursor: pointer;
+      border: 0.5px solid rgba(31, 56, 88, 0.2);
+      box-sizing: border-box;
+      .item {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .image {
+          width: 90px;
+          height: 85px;
+          object-fit: cover;
+          border-radius: 0px;
+        }
+        .content {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+          align-items: flex-start;
+          .text {
+            font-size: 16px;
+            color: #000;
+            font-weight: 400;
+          }
+          .description {
+            font-size: 14px;
+            color: rgba(31, 56, 88, 0.4);
+            letter-spacing: 0;
+            line-height: 20px;
+            opacity: 0.9;
+          }
+          .title {
+            font-size: 20px;
+            color: #000000;
+            letter-spacing: 0;
+            margin-bottom: 16px;
+          }
+          }
+        }
+
+    }
+
+
+  }
+  .title {
+    text-align: center;
+
+  }
+  .subTitle {
+    text-align: center;
+    margin: 12px 0 12px 0;
+
+  }
+
+}
