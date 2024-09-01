@@ -14,7 +14,6 @@ const Item = (props: ItemIProps) => {
     description,
     width = 325,
     title,
-    onClick
   } = props;
 
   const itemStyle = useMemo(() => {
@@ -27,8 +26,8 @@ const Item = (props: ItemIProps) => {
 
   return (
     <div className={`itemContainer ${className || ''}`} style={itemStyle} onClick={() => {
-      const {onClick: _onClick, ...params} = props
-      onClick(params);
+      const {onClick: _onClick = (..._args: any) => {}, ...params} = props
+      _onClick?.(params);
     }}>
       <div className={'item'}>
         <img crossOrigin="anonymous" className="image" src={icon}/>
@@ -51,7 +50,7 @@ function getPosition(columns: number, index: number) {
 }
 export default (props: IProps): React.JSX.Element => {
   // @ts-ignore
-  const {titleConfig, subTitleConfig, list = [], style = {}, columns: propsColumns = 4, onClick} = props;
+  const {titleConfig, subTitleConfig, list = [], style = {}, columns: propsColumns = 4, onClick: _onClick = (...args: any) => {}} = props;
 
   const titleStyle = useMemo(() => {
     const val: React.CSSProperties = {};
@@ -133,8 +132,7 @@ export default (props: IProps): React.JSX.Element => {
                 }
 
                 return (
-                  <Item {...item} key={index} className={`${getX()} ${getY()}`} onClick={onClick!} />
-
+                  <Item {...item} key={index} className={`${getX()} ${getY()}`} onClick={_onClick!} />
                 )
               })
             }

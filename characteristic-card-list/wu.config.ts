@@ -19,7 +19,7 @@ export default defineConfig({
       password: '00000000',
       // 需要在平台侧创建开发这密钥
       accessKey: '7ff55cc818a24278b3bac33dffef3a2d',
-      host: 'http://127.0.0.1:10009'
+      host: 'http://192.168.3.26'
     }
   }
 })
