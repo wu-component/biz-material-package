@@ -27,7 +27,7 @@ const Item = (props: ItemIProps) => {
   return (
     <div className={`itemContainer ${className || ''}`} style={itemStyle} onClick={() => {
       const {onClick: _onClick = (..._args: any) => {}, ...params} = props
-      _onClick?.(params);
+      _onClick && _onClick?.(params);
     }}>
       <div className={'item'}>
         <img crossOrigin="anonymous" className="image" src={icon}/>
