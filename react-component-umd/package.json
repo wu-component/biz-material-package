@@ -4,14 +4,23 @@
   "main": "./dist/umd/index.js",
   "unpkg": "./dist/umd/index.js",
   "scripts": {
-    "build": "rslib build"
+    "build": "rslib build",
+    "dev": "rsbuild dev"
+
   },
   "devDependencies": {
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@rsbuild/plugin-react": "^1.0.5",
     "@rsbuild/plugin-sass": "^1.0.4",
     "@rslib/core": "latest",
-    "@types/react": "^18.3.11",
-    "react": "^18.3.1"
+    "@rsbuild/core": "latest",
+    "@rsbuild/plugin-node-polyfill": "latest",
+    "@rsbuild/plugin-umd": "latest",
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6"
   },
   "peerDependencies": {
     "react": "*"

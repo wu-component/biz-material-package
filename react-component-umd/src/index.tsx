@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { CounterButton } from './components/CounterButton/index';
 import { useCounter } from './useCounter';
 import './index.scss';
@@ -14,3 +14,5 @@ export const Counter: React.FC = () => {
     </div>
   );
 };
+
+export default Counter;
