@@ -6,12 +6,44 @@
   "scripts": {
     "build": "rslib build"
   },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "node": "./dist/esm/index.mjs",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "node": "./dist/cjs/index.js",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./esm": {
+      "types": "./dist/esm/index.d.ts",
+      "node": "./dist/esm/index.mjs",
+      "default": "./dist/esm/index.mjs"
+    },
+    "./esm/*": "./dist/esm/*",
+    "./umd": {
+      "node": "./dist/umd/index.js",
+      "default": "./dist/umd/index.js"
+    },
+    "./umd/*": "./dist/umd/*",
+    "./cjs": {
+      "types": "./dist/cjs/index.d.ts",
+      "node": "./dist/cjs/index.js",
+      "default": "./dist/cjs/index.js"
+    },
+    "./cjs/*": "./dist/umd/*"
+  },
   "devDependencies": {
     "@rsbuild/plugin-react": "^1.0.5",
     "@rsbuild/plugin-sass": "^1.0.4",
     "@rslib/core": "latest",
     "@types/react": "^18.3.11",
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "typescript": "^5.6.3"
   },
   "peerDependencies": {
     "react": "*"

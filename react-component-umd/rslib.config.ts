@@ -58,10 +58,10 @@ export default defineConfig({
         distPath: {
           root: './dist/umd',
         },
-        filename: {
+        /*filename: {
           js: 'umd.js',
           css: 'styles.css',
-        }
+        }*/
       },
     },
   ],
