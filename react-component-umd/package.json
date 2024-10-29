@@ -4,45 +4,22 @@
   "main": "./dist/umd/index.js",
   "unpkg": "./dist/umd/index.js",
   "scripts": {
-    "build": "rslib build"
-  },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/esm/index.d.ts",
-        "node": "./dist/esm/index.mjs",
-        "default": "./dist/esm/index.mjs"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "node": "./dist/cjs/index.js",
-        "default": "./dist/cjs/index.js"
-      }
-    },
-    "./esm": {
-      "types": "./dist/esm/index.d.ts",
-      "node": "./dist/esm/index.mjs",
-      "default": "./dist/esm/index.mjs"
-    },
-    "./esm/*": "./dist/esm/*",
-    "./umd": {
-      "node": "./dist/umd/index.js",
-      "default": "./dist/umd/index.js"
-    },
-    "./umd/*": "./dist/umd/*",
-    "./cjs": {
-      "types": "./dist/cjs/index.d.ts",
-      "node": "./dist/cjs/index.js",
-      "default": "./dist/cjs/index.js"
-    },
-    "./cjs/*": "./dist/umd/*"
+    "build": "rslib build",
+    "dev": "rsbuild dev"
   },
   "devDependencies": {
+    "@rsbuild/core": "latest",
+    "@rsbuild/plugin-node-polyfill": "latest",
     "@rsbuild/plugin-react": "^1.0.5",
     "@rsbuild/plugin-sass": "^1.0.4",
+    "@rsbuild/plugin-umd": "latest",
     "@rslib/core": "latest",
-    "@types/react": "^18.3.11",
-    "react": "^18.3.1",
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {
