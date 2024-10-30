@@ -1,4 +1,4 @@
-import { defineConfig } from '@wu-component/wu-cli';
+import { defineConfig, pluginReact, pluginSass } from '@wu-component/wu-cli';
 
 export default defineConfig({
   meta: {
@@ -21,5 +21,9 @@ export default defineConfig({
       // 需要在平台侧创建开发密钥
       accessKey: ''
     }
-  }
+  },
+  plugins: [
+    pluginReact(),
+    pluginSass()
+  ]
 })

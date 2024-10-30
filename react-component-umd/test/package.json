@@ -29,7 +29,6 @@
     "commitizen": "^4.3.0",
     "commitlint-config-cz": "^0.13.3",
     "commitlint-config-gitmoji": "^2.3.1",
-    "@wu-component/wu-cli": "latest",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.44.0",
