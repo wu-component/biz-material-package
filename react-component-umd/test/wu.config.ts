@@ -1,4 +1,4 @@
-import { defineConfig, pluginReact, pluginSass } from '@wu-component/wu-cli';
+import { defineConfig } from '@wu-component/wu-cli';
 
 export default defineConfig({
   meta: {
@@ -7,23 +7,21 @@ export default defineConfig({
       libName: "Test",
       name: "test",
       formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: format => `${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',
       }
     },
     user: {
-      // 平台侧的用户名
-      userName: '',
-      // 平台侧的密码
-      password: '',
-      // 需要在平台侧创建开发密钥
-      accessKey: ''
+      userName: 'gpt-admin',
+      password: '00000000',
+      // 需要在平台侧创建开发这密钥
+      accessKey: '7ff55cc818a24278b3bac33dffef3a2d',
+      // host: 'http://192.168.0.102'
+      host: 'http://127.0.0.1:10009',
+      debug: true
     }
   },
-  plugins: [
-    pluginReact(),
-    pluginSass()
-  ]
+  plugins: []
 })

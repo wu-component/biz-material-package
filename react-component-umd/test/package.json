@@ -1,11 +1,12 @@
 {
   "name": "test",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "wu dev",
     "build": "wu build",
+    "upload": "wu upload",
     "preview": "live-server --open=lib/index.html",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src",
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
