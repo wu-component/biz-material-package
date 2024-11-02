@@ -29,7 +29,7 @@ export default interface CharacteristicCardListIProps {
    * @min 3
    * @max 6
    * @type number
-   * @default 4
+   * @default 3
    */
   columns: number;
 
