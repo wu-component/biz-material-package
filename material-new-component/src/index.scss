@@ -1,0 +1,25 @@
+.material-new-component-container {
+  display: flex;
+  flex-direction: column;
+  .title {
+    background: #cdcdcd;
+    cursor: pointer;
+  }
+  .content-list {
+    display: flex;
+    flex-direction: row;
+    .item {
+      width: 200px;
+      height: 48px;
+      border: 1px solid #cdcdcd;
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  p {
+    cursor: pointer;
+  }
+}
