@@ -13,7 +13,7 @@ const schema = {
   "manifest": {
     "umd": {
       "src/index.tsx": {
-        "file": "index.production.umd.js",
+        "file": "react-dom.production.js",
         "name": "index",
         "src": "src/index.tsx",
         "isEntry": true
@@ -22,7 +22,7 @@ const schema = {
   },
   "assets": {
     "umd": [
-      "umd/index.production.umd.js"
+      "umd/react-dom.production.js"
     ]
   }
 }
@@ -54,8 +54,8 @@ const build = () => {
       checkAndCreateDir(path.resolve(process.cwd(), 'lib/umd'));
       checkAndCreateFile(schemaJsonPath);
       writeFileSync(schemaJsonPath, JSON.stringify(schema, null, 2), 'utf-8');
-      copyFileSync(path.resolve(process.cwd(), 'source/index.production.umd.js'), path.resolve(process.cwd(), 'lib/umd/index.production.umd.js'))
-      copyFileSync(path.resolve(process.cwd(), 'source/index.development.umd.js'), path.resolve(process.cwd(), 'lib/umd/index.development.umd.js'))
+      copyFileSync(path.resolve(process.cwd(), 'source/react-dom.production.js'), path.resolve(process.cwd(), 'lib/umd/react-dom.production.js'))
+      copyFileSync(path.resolve(process.cwd(), 'source/react-dom.development.js'), path.resolve(process.cwd(), 'lib/umd/react-dom.development.js'))
       resolve(true)
     }catch (e) {
       reject(e)
