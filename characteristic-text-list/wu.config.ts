@@ -7,8 +7,8 @@ export default defineConfig({
     lib: {
       libName: "CharacteristicTextList",
       name: "characteristic-text-list",
-      formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: format => `${format}.js`,
+      formats: ['umd', 'es'],
+      fileName: (_format) => `characteristic-text-list.production.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',
