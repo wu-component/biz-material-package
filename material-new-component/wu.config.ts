@@ -6,8 +6,8 @@ export default defineConfig({
     lib: {
       libName: "MaterialNewComponent",
       name: "material-new-component",
-      formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: (format, entryName) => `${entryName}.${format}.js`,
+      formats: ['umd', 'es'],
+      fileName: (_format) => `material-new-component.production.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',
