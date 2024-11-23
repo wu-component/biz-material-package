@@ -4,7 +4,7 @@ import IProps from "../IProps";
 export default (_props: IProps): React.JSX.Element => {
   const { age, name, date, dateTime, time, selectVal, selectMulVal = [], image, color} = _props || {};
   return (
-    <div>
+    <div className={'material-test-container'}>
       <p>age: {age}</p>
       <p>name: {name}</p>
       <p>date: {date}</p>
