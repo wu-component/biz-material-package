@@ -7,8 +7,8 @@ export default defineConfig({
     lib: {
       libName: "CharacteristicCardList",
       name: "characteristic-card-list",
-      formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: format => `${format}.js`,
+      formats: ['umd', 'es',],
+      fileName: (_format) => `characteristic-card-list.production.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',

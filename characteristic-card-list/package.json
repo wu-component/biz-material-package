@@ -1,11 +1,12 @@
 {
   "name": "characteristic-card-list",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "scripts": {
     "dev": "wu dev",
     "build": "wu build",
+    "upload": "wu upload",
     "preview": "live-server --open=lib/index.html",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src",
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
@@ -26,6 +27,7 @@
     "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
+    "@wu-component/wu-cli": "latest",
     "commitizen": "^4.3.0",
     "commitlint-config-cz": "^0.13.3",
     "commitlint-config-gitmoji": "^2.3.1",
