@@ -6,8 +6,8 @@ export default defineConfig({
     lib: {
       libName: "Test",
       name: "test",
-      formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: (format, entryName) => `${entryName}.${format}.js`,
+      formats: ['umd', 'es'],
+      fileName: (_format) => `test.production.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',
@@ -20,7 +20,6 @@ export default defineConfig({
       accessKey: '7ff55cc818a24278b3bac33dffef3a2d',
       // host: 'http://192.168.0.102'
       host: 'http://127.0.0.1:10009',
-      debug: true
     }
   },
   plugins: []
