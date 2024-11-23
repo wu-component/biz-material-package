@@ -8,7 +8,7 @@ export default defineConfig({
       libName: "LowcodePage",
       name: "lowcode-page",
       formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: format => `${format}.js`,
+      fileName: format => `index.production.${format}.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',
