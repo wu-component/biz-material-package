@@ -1,14 +1,13 @@
 
 import { defineConfig } from '@wu-component/wu-cli';
-
 export default defineConfig({
   meta: {
     type: 'material',
     lib: {
       libName: "LowcodePage",
       name: "lowcode-page",
-      formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: format => `index.production.${format}.js`,
+      formats: ['umd', 'es'],
+      fileName: (_format) => `lowcode-page.production.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',
