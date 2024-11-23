@@ -1,0 +1,70 @@
+{
+  "name": "react-dom",
+  "private": true,
+  "version": "18.3.1",
+  "type": "module",
+  "main": "./lib/umd/index.umd.js",
+  "module": "./lib/es/index.es.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/es/index.es.js",
+      "require": "./lib/umd/index.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "wu dev",
+    "upload": "wu upload",
+    "build": "tsx --no-warnings ./scripts/build.ts --transpile-only",
+    "preview": "live-server --open=lib/index.html",
+    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src",
+    "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
+    "lint:ls-lint": "ls-lint",
+    "lint:lint-staged": "lint-staged -c ./.husky/lint-staged.config.js"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "commitizen": "^4.3.0",
+    "commitlint-config-cz": "^0.13.3",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "@wu-component/wu-cli": "latest",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0",
+    "sass": "^1.63.6",
+    "standard-version": "^9.5.0",
+    "stylelint": "^16.3.1",
+    "stylelint-config-recess-order": "^5.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-prettier": "^5.0.0",
+    "typescript": "^5.0.2",
+    "windicss": "^3.5.6",
+    "tsx": "^4.9.3"
+  },
+  "workspaces": [],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
