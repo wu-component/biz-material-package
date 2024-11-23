@@ -6,8 +6,8 @@ export default defineConfig({
     lib: {
       libName: "MaterialTest",
       name: "material-test",
-      formats: ['umd', 'es', 'cjs', 'iife'],
-      fileName: (format, entryName) => `${entryName}.${format}.js`,
+      formats: ['umd', 'es'],
+      fileName: (_format) => `material-test.production.js`,
       external: {
         react: 'React',
         'react-dom': 'ReactDOM',
@@ -18,9 +18,7 @@ export default defineConfig({
       password: '00000000',
       // 需要在平台侧创建开发这密钥
       accessKey: '7ff55cc818a24278b3bac33dffef3a2d',
-      // host: 'http://192.168.0.102'
-      host: 'http://127.0.0.1:10009',
-      debug: true
+      host: 'http://127.0.0.1:10009'
     }
   }
 })
