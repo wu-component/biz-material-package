@@ -1,1 +1,5 @@
-{}
+{
+  "dependencies": {
+    "@wu-component/wu-cli": "^2.4.0"
+  }
+}

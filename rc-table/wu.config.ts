@@ -6,7 +6,8 @@ export default defineConfig({
     lib: {
       libName: "RcTable",
       name: "rc-table",
-      formats: ['umd', 'es', 'cjs', 'iife'],
+      //formats: ['umd', 'es', 'cjs', 'iife'],
+      formats: ['umd'],
       fileName: format => `${format}.js`,
       external: {
         react: 'React',
